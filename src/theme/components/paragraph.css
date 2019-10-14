@@ -1,0 +1,7 @@
+@import "../colors.css";
+
+.paragraph {
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--vanilla);
+}

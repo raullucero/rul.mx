@@ -1,0 +1,12 @@
+@import "../colors.css";
+
+.link {
+  color: var(--orange);
+  cursor: pointer;
+  margin: 0 5px;
+  transition: color 0.2s ease-in;
+}
+
+.link:hover {
+  color: var(--white);
+}
