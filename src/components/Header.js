@@ -10,7 +10,9 @@ import { faDropbox } from "@fortawesome/free-brands-svg-icons";
 export const Header = () => (
   <header className="header">
     <img className="logo" src={logo} alt="Logo Raul Lucero" />
-    <SubTitle>Front End - Software Engineer @ <Dropbox/></SubTitle>
+    <SubTitle>
+      Full Stack - Software Engineer @<Dropbox />
+    </SubTitle>
   </header>
 );
 
