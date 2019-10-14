@@ -9,6 +9,7 @@ function App() {
     <main className="main">
       <Header />
       <section>
+        
         <Paragraph>Hello there!</Paragraph>
       </section>
       <footer>

@@ -1,5 +1,5 @@
 @import "./theme/constants.css";
-/* main element */
+
 .main {
   max-width: var(--max-width);
 }
