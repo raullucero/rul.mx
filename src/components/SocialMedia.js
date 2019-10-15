@@ -1,19 +1,47 @@
-import React from 'react';
-import {Link} from './Link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from "react";
+import { Link } from "./Link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 
-export const SocialMedia = () => (
-  <React.Fragment>
-    <Link href="https://www.linkedin.com/in/raul-lucero" target="_blank">
-      <FontAwesomeIcon icon={faLinkedinIn} size="2x"/>
-    </Link>
-    <Link href="https://github.com/raullucero" target="_blank">
-      <FontAwesomeIcon icon={faGithub} size="2x"/>
-    </Link>
-    <Link href="mailto:null@rul.mx">
-      <FontAwesomeIcon icon={faEnvelope} size="2x"/>
-    </Link>
-  </React.Fragment>
-);
+const getRandomNumber = max => {
+  return Math.floor(Math.random() * Math.floor(max));
+};
+
+export const SocialMedia = () => {
+  const [number, setNumber] = useState(getRandomNumber(4));
+
+  setInterval(() => {
+    let newNumber = number;
+    while (newNumber === number) {
+      newNumber = getRandomNumber(4);
+    }
+    setNumber(newNumber);
+  }, 10000);
+
+  return (
+    <React.Fragment>
+      <Link href="https://www.linkedin.com/in/raul-lucero" target="_blank">
+        <FontAwesomeIcon
+          className={`animated infinite ${number === 1 ? "tada" : "pulse"}`}
+          icon={faLinkedinIn}
+          size="2x"
+        />
+      </Link>
+      <Link href="https://github.com/raullucero" target="_blank">
+        <FontAwesomeIcon
+          className={`animated infinite ${number === 2 ? "tada" : "pulse"}`}
+          icon={faGithub}
+          size="2x"
+        />
+      </Link>
+      <Link href="mailto:null@rul.mx">
+        <FontAwesomeIcon
+          className={`animated infinite ${number === 3 ? "tada" : "pulse"}`}
+          icon={faEnvelope}
+          size="2x"
+        />
+      </Link>
+    </React.Fragment>
+  );
+};

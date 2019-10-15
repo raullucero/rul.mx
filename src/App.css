@@ -1,5 +1,19 @@
 @import "./theme/constants.css";
 
 .main {
+  margin: 0 auto;
   max-width: var(--max-width);
+  overflow-y: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+
+  height: 150px;
 }

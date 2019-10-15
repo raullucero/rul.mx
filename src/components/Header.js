@@ -11,7 +11,7 @@ export const Header = () => (
   <header className="header">
     <img className="logo" src={logo} alt="Logo Raul Lucero" />
     <SubTitle>
-      Full Stack - Software Engineer @<Dropbox />
+      Full Stack Software Engineer @Dropbox <Dropbox />
     </SubTitle>
   </header>
 );
