@@ -1,0 +1,24 @@
+.skip-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+
+  cursor: pointer;
+
+  color: var(--white);
+  width: 100px;
+  height: 50px;
+
+  right: 0;
+  top: 10px;
+
+  transition: color 0.2s ease-in;
+}
+
+.skip-container:hover {
+  color: var(--orange);
+}
+
+.skip-container:hover .skip-icon {
+  color: var(--white);
+}

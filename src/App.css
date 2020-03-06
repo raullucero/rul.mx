@@ -1,9 +1,14 @@
+@import "./theme/colors.css";
 @import "./theme/constants.css";
 
 .main {
   margin: 0 auto;
   max-width: var(--max-width);
   overflow-y: auto;
+}
+
+.typist-container {
+  display: inline-flex;
 }
 
 footer {
